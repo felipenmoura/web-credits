@@ -1,0 +1,161 @@
+@font-face
+{
+	font-family: credit;
+	src: url(fonts/SF-Movie-Poster.ttf);
+}
+@font-face
+{
+	font-family: credit-i;
+	src: url(fonts/SF-Movie-Poster-Oblique.ttf);
+}
+@font-face
+{
+	font-family: credit-b;
+	src: url(fonts/SF-Movie-Poster-Bold.ttf);
+}
+
+#webcredits-container{
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 99999999;
+	width: 100%;
+	height: 100%;
+	background: rgba(0, 0, 0, .85);
+	opacity: 0;
+}
+#webcredits-content, #webcredits-content *{
+	color: #fff;
+	font-family: credit;
+	letter-spacing: 4px;
+	line-height: 120%;
+}
+#webcredits-content{
+	position: absolute;
+	width: 100%;
+	font-size: 10px;
+	--font-family: monospace, Tahoma, sans-serif;
+	opacity: 0;
+}
+
+#webcredits-container, #webcredits-content{
+	-webkit-transition: opacity 500ms linear;
+	-moz-transition: opacity 500ms linear;
+	transition: opacity 500ms linear;
+}
+
+#webcredits-container .casting td:nth-child(1){
+	margin-right: 20px;
+	padding-right: 20px;
+	vertical-align: top;
+}
+
+#webcredits-container .team td{
+	padding-bottom: 40px !important;
+}
+
+
+/****************************************************/
+
+#webcredits-content section{
+	width: 80%;
+	margin: auto;
+	font-size: 3em;
+	margin-bottom: 60px;
+	position: relative;
+}
+#webcredits-content section table{
+	border-collapse: collapse;
+	border: none;
+	width: 100%;
+}
+
+#webcredits-content section.the-end table, #webcredits-content section.full-screen table{
+	height: 100%;
+	width: 100%;
+}
+#webcredits-content section.the-end td, #webcredits-content section.full-screen td{
+	vertical-align: center;
+	text-align: center;
+}
+#webcredits-content table[data-columns="1"] td{
+	width: 100%;
+	text-align: center;
+}
+#webcredits-content table[data-columns="2"] td{
+	width: 50%;
+	margin: 0;
+	padding: 0;
+}
+#webcredits-content table[data-columns="2"] td:nth-child(1){
+	text-align: right;
+}
+#webcredits-content table[data-columns="2"] td:nth-child(2){
+	text-align: left;
+}
+#webcredits-content table[data-columns="3"] td{
+	width: 33%;
+	margin: 0;
+	padding: 0;
+	text-align: center;
+}
+#webcredits-content table[data-columns="4"] td{
+	width: 25%;
+	margin: 0;
+	padding: 0;
+	text-align: center;
+}
+#webcredits-content td img{
+	width: 80%;
+	margin: auto;
+	display: block;
+}
+#webcredits-content h2{
+	text-align: center;
+	display: block;
+	float: none;
+	width: 100%;
+}
+#webcredits-content h3{
+	text-align: center;
+	display: block;
+	float: none;
+	width: 100%;
+	font-weight: normal;
+	margin: 0;
+	padding: 0;
+	margin-top: 20px;
+}
+
+#webcredits-content .quote{
+	margin-top: 240px;
+	margin-bottom: 240px;
+}
+
+#webcredits-content blockquote{
+	font-style: italic;
+	margin-top: 80px;
+	margin-bottom: 80px;
+	font-family: credit-i;
+}
+
+#webcredits-content strong{
+	font-size: 140%;
+}
+
+#webcredits-content h3, #webcredits-content h2,
+#webcredits-content .casting td:nth-child(1){
+	color: #ddd;
+}
+
+#webcredits-content .full-screen table, #webcredits-content .full-screen table td{
+	height: 100%;
+}
+
+/**************/
+#webcredits-content blockquote, #webcredits-content em, #webcredits-content i{
+	font-family: credit-i;
+}
+#webcredits-content strong, #webcredits-content b{
+	font-family: credit-b;
+}
