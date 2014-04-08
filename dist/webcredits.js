@@ -41,6 +41,14 @@
 				setTimeout(function(){
 					PRIVATE.creditsEl.parentNode.removeChild(PRIVATE.creditsEl);
 					PRIVATE.creditsEl= false;
+
+					if(typeof PUBLIC.onend){
+						try{
+							PUBLIC.onend();
+						}catch(e){
+							console.error('Failed executing onend listener', e.message, e);
+						}
+					}
 				}, 1000);
 			}, 2000);
 			return;
@@ -83,6 +91,14 @@
 		});
 
 		PRIVATE.creditsSize= PRIVATE.creditsContentEl.offsetHeight - clientHeight;
+
+		if(typeof PUBLIC.onstart){
+			try{
+				PUBLIC.onstart();
+			}catch(e){
+				console.error('Failed executing onstart listener', e.message, e);
+			}
+		}
 
 		setTimeout(function(){
 			PRIVATE.animate();

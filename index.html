@@ -30,6 +30,12 @@
 		<script type="text/javascript">
 			document.getElementById('iframe').addEventListener('load', function(){
 				setTimeout(function(){
+					webCredits.onstart= function(){
+						console.log('started');
+					};
+					webCredits.onend= function(){
+						console.log('ended');
+					};
 					webCredits.init('./credits/credits.html');
 				}, 1000);
 			});

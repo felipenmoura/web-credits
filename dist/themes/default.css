@@ -68,6 +68,8 @@
 	border-collapse: collapse;
 	border: none;
 	width: 100%;
+	position: relative;
+	z-index: 9;
 }
 
 #webcredits-content section.the-end table, #webcredits-content section.full-screen table{
@@ -158,4 +160,19 @@
 }
 #webcredits-content strong, #webcredits-content b{
 	font-family: credit-b;
+}
+
+#webcredits-content section>img{
+	width: 300px;
+	position: absolute;
+	z-index: 1;
+	border: solid 3px white;
+	-webkit-transform: skew(0deg, -10deg);
+	-moz-transform: skew(0deg, -10deg);
+	transform: skew(0deg, -10deg);
+}
+#webcredits-content section>img.right{
+	-webkit-transform: skew(0deg, 10deg);
+	-moz-transform: skew(0deg, 10deg);
+	transform: skew(0deg, 10deg);
 }
